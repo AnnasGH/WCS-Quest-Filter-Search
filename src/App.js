@@ -14,7 +14,9 @@ export default function App() {
   ]);
 
   let tmpArray = [];
-  tmpArray = users.filter((user) => user === searchValue);
+  tmpArray = users.filter((user) => user.startsWith(searchValue));
+
+  console.log(tmpArray);
 
   return (
     <div className="App">
